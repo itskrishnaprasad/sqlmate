@@ -11,3 +11,8 @@ export function runWithLoader(text, fn, delay = 2500) {
     fn();
   }, delay);
 }
+
+export async function getCurrentDb(db) {
+  const [rows] = await db.query("SELECT DATABASE() AS currentDb");
+  return rows[0].currentDb;
+}

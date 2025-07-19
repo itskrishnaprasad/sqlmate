@@ -1,7 +1,5 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
-import { branding } from "./prompts.js";
-import { clearScreen } from "../utils/helper.js";
 
 export async function mainMenu() {
   const { action } = await inquirer.prompt([
